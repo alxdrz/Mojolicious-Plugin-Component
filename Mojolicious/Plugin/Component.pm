@@ -8,6 +8,7 @@ use File::Find;
 
 use Module::Load;
 
+
 sub register
 {
 	my($self, $app, $conf) = @_;
@@ -30,9 +31,7 @@ sub register
 	
 	my $path  = catdir($lib, split('::', $namespace));
 	
-	
 	return unless -d $path;
-	
 	
 	my %modules;
 
